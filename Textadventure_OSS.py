@@ -41,7 +41,8 @@ while aktuelle_szene.optionen is not None:
         wahl = input("Keine mögliche Option. Probiere nochmals: ")
     
     aktuelle_szene = szenen[aktuelle_szene.optionen[wahl]["ziel"]]
-    
+
+    print ("---" * 20)
 
 
 
