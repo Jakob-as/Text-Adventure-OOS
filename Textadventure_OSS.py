@@ -4,7 +4,10 @@ class Szene:
         self.text = text
         self.optionen = optionen
 
-
+    def printen(self):
+        print(self.text)
+        for nummer, option in self.optionen.items():
+            print(f"{nummer}: {option['beschreibung']}")
 
 
 
@@ -33,9 +36,7 @@ szenen = {
 aktuelle_szene = szenen["start"]
 
 while aktuelle_szene.optionen is not None:
-    print(aktuelle_szene.text)
-    for nummer, option in aktuelle_szene.optionen.items():
-        print(f"{nummer}: {option['beschreibung']}")
+    aktuelle_szene.printen()
     wahl = input()
     while wahl not in aktuelle_szene.optionen:
         wahl = input("Keine mögliche Option. Probiere nochmals: ")
